@@ -165,11 +165,11 @@
                                                             </select>
                                                         </div>
                                                     </form>
-                                                    <a th:if="${user.getLogin()=='admin'}" style="color:red">Изменение
+                                                    <a th:if="${user.getLogin()=='admin@mail.ru'}" style="color:red">Изменение
                                                         этого пользователя невозможно!</a>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <form th:if="${user.getLogin()!='admin'}">
+                                                    <form th:if="${user.getLogin()!='admin@mail.ru'}">
                                                         <input type="hidden" name="id" th:value="${user.getId()}">
                                                         <button type="submit" class="btn btn-primary"
                                                                 th:form="'updateUserForm' + ${user.getId()}">Edit
@@ -243,11 +243,11 @@
                                                             </select>
                                                         </div>
                                                     </form>
-                                                    <a th:if="${user.getLogin()=='admin'}" style="color:red">Удаление
+                                                    <a th:if="${user.getLogin()=='admin@mail.ru'}" style="color:red">Удаление
                                                         этого пользователя невозможно!</a>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <form th:if="${user.getLogin()!='admin'}">
+                                                    <form th:if="${user.getLogin()!='admin@mail.ru'}">
                                                         <input type="hidden" name="id" th:value="${user.getId()}">
                                                         <button type="submit" class="btn btn-danger"
                                                                 th:form="'deleteUserForm' + ${user.getId()}">Delete
