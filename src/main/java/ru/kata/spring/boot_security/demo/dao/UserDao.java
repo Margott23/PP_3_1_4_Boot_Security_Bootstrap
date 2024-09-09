@@ -6,7 +6,7 @@ import ru.kata.spring.boot_security.demo.models.User;
 import java.util.List;
 import java.util.Optional;
 
-public interface UserDAO {
+public interface UserDao {
 
     List<User> findAll();
 

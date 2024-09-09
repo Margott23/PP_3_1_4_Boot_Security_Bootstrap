@@ -4,7 +4,7 @@ import ru.kata.spring.boot_security.demo.models.Role;
 
 import java.util.List;
 
-public interface RoleDAO {
+public interface RoleDao {
     Role findByRole(String roleName);
 
     void save(Role role);

@@ -6,7 +6,6 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -54,6 +53,14 @@ public class User implements UserDetails {
     private List<Role> roles = new ArrayList<>();
 
     public User() {
+    }
+
+    public User(String name, String surname, int age, String login, String password) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.login = login;
+        this.password = password;
     }
 
     public User(String name, String surname, int age, String login, String password, List<Role> roles) {

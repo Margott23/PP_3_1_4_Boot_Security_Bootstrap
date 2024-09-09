@@ -1,7 +1,5 @@
 package ru.kata.spring.boot_security.demo.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -52,7 +50,7 @@ public class AdminController {
 
     @PostMapping("/delete")
     public String deleteUser(@RequestParam(value = "id") Integer id) {
-        userService.delete(userService.findById(id));
+        userService.delete(id);
         return "redirect:/admin";
     }
 

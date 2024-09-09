@@ -10,4 +10,8 @@ public interface RoleService {
     void updateRoleForUser(User user);
 
     List<Role> getAll();
+
+    void addDefaultRoles();
+
+    void updateDefaultRolesToDefaultUser(User admin);
 }
