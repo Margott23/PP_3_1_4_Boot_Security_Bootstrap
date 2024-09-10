@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyUserDetailsService implements UserDetailsService {
 
-    private final UserServiceImpl userService;
+    private final UserService userService;
 
-    public MyUserDetailsService(UserServiceImpl userService) {
+    public MyUserDetailsService(UserService userService) {
         this.userService = userService;
     }
 

@@ -2,7 +2,7 @@ package ru.kata.spring.boot_security.demo.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.kata.spring.boot_security.demo.dao.RoleDaoImpl;
+import ru.kata.spring.boot_security.demo.dao.RoleDao;
 import ru.kata.spring.boot_security.demo.models.Role;
 import ru.kata.spring.boot_security.demo.models.User;
 
@@ -12,9 +12,9 @@ import java.util.List;
 @Service
 public class RoleServiceImpl implements RoleService {
 
-    private final RoleDaoImpl roleRepository;
+    private final RoleDao roleRepository;
 
-    public RoleServiceImpl(RoleDaoImpl roleRepository) {
+    public RoleServiceImpl(RoleDao roleRepository) {
         this.roleRepository = roleRepository;
     }
 
